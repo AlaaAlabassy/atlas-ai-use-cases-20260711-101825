@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>أطلس استخدامات الذكاء الاصطناعي</title>
+    <meta
+      name="description"
+      content="حالات واقعية لاستخدام الذكاء الاصطناعي في المحاماة والمحاسبة والهندسة وصناعة المحتوى."
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">Atlas Mission</p>
+          <h1>أطلس استخدامات الذكاء الاصطناعي</h1>
+        </div>
+      </div>
+      <div class="summary-strip" aria-label="ملخص البيانات">
+        <div>
+          <span id="sourceCount">0</span>
+          <small>مصدر خام</small>
+        </div>
+        <div>
+          <span id="caseCount">0</span>
+          <small>حالة مدمجة</small>
+        </div>
+        <div>
+          <span id="professionCount">0</span>
+          <small>تصنيفات</small>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar" aria-label="الفلاتر">
+        <section class="panel">
+          <label class="field-label" for="searchInput">بحث</label>
+          <div class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="searchInput" type="search" autocomplete="off" placeholder="عنوان، سير عمل، مصدر">
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-title">المهنة</div>
+          <div id="filterList" class="filter-list"></div>
+        </section>
+
+        <section class="panel data-panel">
+          <div class="panel-title">توزيع الحالات</div>
+          <div id="bars" class="bars"></div>
+        </section>
+      </aside>
+
+      <section class="content">
+        <div class="content-head">
+          <div>
+            <p class="eyebrow">Phase 3</p>
+            <h2>حالات قابلة للبحث والفلترة</h2>
+          </div>
+          <button id="resetButton" class="ghost-button" type="button">إعادة ضبط</button>
+        </div>
+
+        <div id="activeMeta" class="active-meta"></div>
+        <div id="cards" class="cards" aria-live="polite"></div>
+        <div id="emptyState" class="empty-state" hidden>
+          لا توجد حالات مطابقة.
+        </div>
+      </section>
+    </main>
+
+    <template id="caseTemplate">
+      <article class="case-card">
+        <div class="case-card-head">
+          <span class="profession-pill"></span>
+          <span class="source-count"></span>
+        </div>
+        <h3></h3>
+        <p class="summary"></p>
+        <div class="case-grid">
+          <section>
+            <h4>سير العمل</h4>
+            <ul class="workflow-list"></ul>
+          </section>
+          <section>
+            <h4>تنبيهات</h4>
+            <ul class="caution-list"></ul>
+          </section>
+        </div>
+        <details>
+          <summary>الأدلة والمصادر</summary>
+          <div class="evidence-list"></div>
+        </details>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
