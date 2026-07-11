@@ -1,0 +1,600 @@
+{
+  "phase": "Phase 2 - Filtration & Merging",
+  "created_at": "2026-07-11T10:12:35.235711+00:00",
+  "input_summary": {
+    "raw_files_read": 14,
+    "raw_directory": "logs/raw_data/",
+    "source_count_by_detected_profession": {
+      "محاماة": 2,
+      "إنتاجية مهنية عامة": 4,
+      "صناعة محتوى": 1,
+      "محاسبة": 3,
+      "هندسة": 2
+    }
+  },
+  "cleaning_rules_applied": [
+    "Removed VTT timestamps, caption tags, repeated auto-caption fragments, and empty transcript markers.",
+    "Removed short praise-only comments, calls to subscribe, and comments without professional use-case signal.",
+    "Grouped similar transcript/comment signals into merged cases by profession and workflow.",
+    "Kept source excerpts with every merged case so Phase 3 can trace claims back to raw YouTube data."
+  ],
+  "professions": [
+    {
+      "profession": "محاماة",
+      "cases": [
+        {
+          "case_id": "legal_research_with_verification",
+          "title": "البحث القانوني وصياغة المذكرات مع التحقق من السوابق",
+          "merged_from_sources": [
+            "yt_source_01",
+            "yt_source_11"
+          ],
+          "summary": "تظهر البيانات أن الذكاء الاصطناعي يُستخدم في البحث القانوني وصياغة المخرجات الأولية، لكن الأمثلة القانونية تؤكد ضرورة التحقق من السوابق والاستشهادات قبل الاعتماد عليها.",
+          "practical_workflows": [
+            "استخدام النموذج لتكوين مسودة بحث أو مذكرة أولية.",
+            "مطابقة كل استشهاد أو حكم قانوني مع مصدر قانوني موثوق قبل تقديمه.",
+            "اعتبار المخرجات نقطة بداية لا رأيًا قانونيًا نهائيًا."
+          ],
+          "limitations_or_cautions": [
+            "المصادر القانونية الخام تضمنت أمثلة على سوابق أو استشهادات غير صحيحة عند الاعتماد غير المتحقق على ChatGPT.",
+            "أي مذكرة أو استشهاد قضائي يجب التحقق منه من قواعد قانونية موثوقة."
+          ],
+          "evidence": [
+            {
+              "source_id": "yt_source_01",
+              "title": "How to Use ChatGPT to Ruin Your Legal Career",
+              "url": "https://www.youtube.com/watch?v=oqSYljRYDEM",
+              "evidence_excerpt": "Comment: Not a lawyer but a former federal paralegal. No, you weren’t too harsh. It’s not as if it’s so hard to use Lexis and Westlaw to do legal research and then compose a filing or brief. Even if you were an old geezer using typewriters and paper-bound law books and slip cases, it’s still not that hard. It was lazy lawyering to use ChatGPT for a filing in a county or state court, but especially for a federal court. The client paid for expertise and experience in representation, not some fool playing around on the web. “Life would be a breeze…Shaboon…”"
+            },
+            {
+              "source_id": "yt_source_01",
+              "title": "How to Use ChatGPT to Ruin Your Legal Career",
+              "url": "https://www.youtube.com/watch?v=oqSYljRYDEM",
+              "evidence_excerpt": "or portions of it and chat GPT cited to fake cases the lawyer also could have just made them up uh lawyers write placeholder arguments all the time and then scrap them when the legal research turns out the wrong way but given that the original brief cites case names with reallook citations it's likely that the lawyer just used chat PT just didn't check the work that was generated now we'll get to that in just a second and that's when all hell br"
+            },
+            {
+              "source_id": "yt_source_11",
+              "title": "Top 4 AI Legal Tools Revolutionizing 2025 🔥 | The Future of Legal Tech",
+              "url": "https://www.youtube.com/watch?v=AAQCtkZjG8A",
+              "evidence_excerpt": "Rutters for an insane $650 million co-council their gen AI Legal Assistant is now the pretty face of the company it leverages GPT to automate legal tasks like Doc review legal research deposition prep and contract analysis it does this by combining natural language processing and Boolean search which is basically a mathematical system that says variables can either have two answers a one or a zero a true or a false and this is really import"
+            },
+            {
+              "source_id": "yt_source_11",
+              "title": "Top 4 AI Legal Tools Revolutionizing 2025 🔥 | The Future of Legal Tech",
+              "url": "https://www.youtube.com/watch?v=AAQCtkZjG8A",
+              "evidence_excerpt": "see what people actually think I dug into reviews and blog posts and it looks like they do still have some improvements to make but overall people are happy with the price the citation check and their Integrations now overall this one has had strong and steady growth over the past 5 years and I hope that they can keep that momentum going post acquisition and grow even further this year so let's find out let's look at a specialized AI Le"
+            }
+          ]
+        },
+        {
+          "case_id": "legal_document_review",
+          "title": "مراجعة المستندات والعقود كمسودة أولى لا كبديل عن المحامي",
+          "merged_from_sources": [
+            "yt_source_11"
+          ],
+          "summary": "تصف المصادر أدوات قانونية ومراجعة مستندات كوسيلة لتسريع الفهم والصياغة الأولية، مع بقاء المسؤولية المهنية على المحامي.",
+          "practical_workflows": [
+            "تلخيص مستند أو عقد طويل لاستخراج النقاط المهمة.",
+            "توليد قائمة أسئلة أو مخاطر للمراجعة البشرية.",
+            "إعادة صياغة مسودات قانونية بعد مراجعة المحامي."
+          ],
+          "limitations_or_cautions": [
+            "تحتاج المخرجات إلى مراجعة بشرية قبل استخدامها مهنيًا."
+          ],
+          "evidence": [
+            {
+              "source_id": "yt_source_11",
+              "title": "Top 4 AI Legal Tools Revolutionizing 2025 🔥 | The Future of Legal Tech",
+              "url": "https://www.youtube.com/watch?v=AAQCtkZjG8A",
+              "evidence_excerpt": "the process of reviewing and managing legal documents their Tech makes it way easier to understand these docs it also automates a bunch of these really long and mundane tasks so legal teams can save a lot of time and money Robin AI has three key modules for contract customization draft review and query the draft module lets you create contracts from pre-built templates which already massively speeds up the process with review you can edit and n"
+            },
+            {
+              "source_id": "yt_source_11",
+              "title": "Top 4 AI Legal Tools Revolutionizing 2025 🔥 | The Future of Legal Tech",
+              "url": "https://www.youtube.com/watch?v=AAQCtkZjG8A",
+              "evidence_excerpt": "300% growth in Just 2 years check this out it's called Robin AI Robin is an AI company that uses our artificial intelligence to speed up the process of reviewing and managing legal documents their Tech makes it way easier to understand these docs it also automates a bunch of these really long and mundane tasks so legal teams can save a lot of time and money Robin AI has three key modules for contract customization draft review and query the draf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": "محاسبة",
+      "cases": [
+        {
+          "case_id": "accounting_automation",
+          "title": "أتمتة مهام المحاسبة المتكررة مثل الفواتير والتصنيف والتسويات",
+          "merged_from_sources": [
+            "yt_source_08",
+            "yt_source_09",
+            "yt_source_10"
+          ],
+          "summary": "تظهر مصادر المحاسبة تركيزًا على تقليل العمل اليدوي المتكرر مثل الفواتير، الإيصالات، التصنيف، والتسويات، بحيث ينتقل وقت المحاسب إلى مراجعة النتائج وخدمة العميل.",
+          "practical_workflows": [
+            "استخراج بيانات من فواتير أو إيصالات وتصنيفها.",
+            "اقتراح قيود أو فئات محاسبية ثم مراجعتها.",
+            "تسريع التسويات الدورية وتقليل الإدخال اليدوي."
+          ],
+          "limitations_or_cautions": [
+            "ينبغي مطابقة النتائج مع النظام المحاسبي والسجلات الأصلية قبل اعتمادها."
+          ],
+          "evidence": [
+            {
+              "source_id": "yt_source_08",
+              "title": "15 AI Tools Smart Accountants Are Using Right Now",
+              "url": "https://www.youtube.com/watch?v=acfvmTqp-uE",
+              "evidence_excerpt": "Expert just launched in the US last year, and it does a number of things from automated file reviews to ensure that the data is correct to workflow management to this, which I love, an AIdriven alert system where you can create flags to be notified of things going on in your client's accounting files."
+            },
+            {
+              "source_id": "yt_source_08",
+              "title": "15 AI Tools Smart Accountants Are Using Right Now",
+              "url": "https://www.youtube.com/watch?v=acfvmTqp-uE",
+              "evidence_excerpt": "you're bad at tracking your time because as a thing to do, it kind of sucks. And Laurel is going to try to make that as painless as possible for you. So, whether you run an accounting firm today or you're just trying to out hustle the accountant in the cubicle next to you, with a bit of a mental shift, AI can enable some really cool new workflow automation. And honestly, the app still at the center of it all. It's chat GPT. But 95% of acco"
+            },
+            {
+              "source_id": "yt_source_09",
+              "title": "ChatGPT for Accountants (with Use Cases)",
+              "url": "https://www.youtube.com/watch?v=CFAMh7NMqgo",
+              "evidence_excerpt": "a context before telling it what to do. Here’s what you can share in the prompt: You’re an AI assistant trained to extract specific data from invoices. Please extract the Invoice Number, Vendor, Date, Due Date, and Total Amount Due. Ensure the data is accurate and matches the context provided in the invoice. Then, I’ll upload the invoice and see the result: And there you have it—ChatGPT effortlessly extracts the information I need. It"
+            },
+            {
+              "source_id": "yt_source_09",
+              "title": "ChatGPT for Accountants (with Use Cases)",
+              "url": "https://www.youtube.com/watch?v=CFAMh7NMqgo",
+              "evidence_excerpt": "Let’s see how. First, give ChatGPT a context before telling it what to do. Here’s what you can share in the prompt: You’re an AI assistant trained to extract specific data from invoices. Please extract the Invoice Number, Vendor, Date, Due Date, and Total Amount Due. Ensure the data is accurate and matches the context provided in the invoice. Then, I’ll upload the invoice and see the result: And there you have it—ChatGPT effortlessly ex"
+            },
+            {
+              "source_id": "yt_source_10",
+              "title": "Why ChatGPT Agent Is Already Changing Accounting Firms",
+              "url": "https://www.youtube.com/watch?v=3O7T_g4wbq0",
+              "evidence_excerpt": "And one really interesting thing about chat GPT agent, specifically as it applies to our accounting firm workflows, is it's the best AI we've ever had at doing spreadsheet stuff."
+            },
+            {
+              "source_id": "yt_source_10",
+              "title": "Why ChatGPT Agent Is Already Changing Accounting Firms",
+              "url": "https://www.youtube.com/watch?v=3O7T_g4wbq0",
+              "evidence_excerpt": "that I gave it. And one really interesting thing about chat GPT agent, specifically as it applies to our accounting firm workflows, is it's the best AI we've ever had at doing spreadsheet stuff. And that's great for us because virtually all of us have some version of this example. Look at these. These are daily sales reports from a restaurant. This is like a weekly summary. This is a little handfilled out thing that somebody in the res"
+            }
+          ]
+        },
+        {
+          "case_id": "accounting_advisory_analysis",
+          "title": "تحليل البيانات المالية وتحويل المحاسب إلى مستشار أعمال",
+          "merged_from_sources": [
+            "yt_source_08",
+            "yt_source_09",
+            "yt_source_10"
+          ],
+          "summary": "تربط البيانات بين استخدام الذكاء الاصطناعي وتحليل المعلومات المالية، التنبؤ، وإنتاج رؤى تساعد المحاسبين على تقديم دور استشاري لا يقتصر على إدخال البيانات.",
+          "practical_workflows": [
+            "تحليل اتجاهات المصروفات أو الإيرادات.",
+            "إنتاج أسئلة للعميل بناءً على البيانات المالية.",
+            "تلخيص مؤشرات مالية وتحويلها إلى توصيات قابلة للمراجعة."
+          ],
+          "limitations_or_cautions": [
+            "التحليل لا يغني عن الحكم المهني أو معرفة السياق الضريبي والتنظيمي."
+          ],
+          "evidence": [
+            {
+              "source_id": "yt_source_08",
+              "title": "15 AI Tools Smart Accountants Are Using Right Now",
+              "url": "https://www.youtube.com/watch?v=acfvmTqp-uE",
+              "evidence_excerpt": "a list of all the stuff it looks like the client would need to give you this year, and then it hounds the clients relentlessly until they submit it so you don't have to. On the tax research side, two companies doing interesting stuff here. Tax GPT and Blue J. They're both AI first research platforms, kind of like Chat GPT, but with authoritative tax literature behind them. Now, once you got this big successful firm humming right along, you get y"
+            },
+            {
+              "source_id": "yt_source_08",
+              "title": "15 AI Tools Smart Accountants Are Using Right Now",
+              "url": "https://www.youtube.com/watch?v=acfvmTqp-uE",
+              "evidence_excerpt": "for firms that's going to make you look smart. Ader, basically, you connect it to all your clients accounting files. This view right here, I love it. Automatically flags advisory opportunities and like a single unified dashboard for all my clients. I then reach out to my clients, take credit for the idea, and then I charge them for it. Hell of a grift. Aer's also doing some cool like more open-ended prompting kind of like chat GPT for"
+            },
+            {
+              "source_id": "yt_source_09",
+              "title": "ChatGPT for Accountants (with Use Cases)",
+              "url": "https://www.youtube.com/watch?v=CFAMh7NMqgo",
+              "evidence_excerpt": "data in a table. And there you have it! ChatGPT extracts and organizes information—making the process quick and efficient. All right! Let’s now look at the second use case: The Financial Advisor. ChatGPT is also highly effective for financial analysis. By analyzing historical data, ChatGPT can identify trends and patterns. It can highlight significant changes in revenue, expenses, and other key financial metrics—helping accountants make in"
+            },
+            {
+              "source_id": "yt_source_09",
+              "title": "ChatGPT for Accountants (with Use Cases)",
+              "url": "https://www.youtube.com/watch?v=CFAMh7NMqgo",
+              "evidence_excerpt": "ChatGPT is also highly effective for financial analysis."
+            },
+            {
+              "source_id": "yt_source_10",
+              "title": "Why ChatGPT Agent Is Already Changing Accounting Firms",
+              "url": "https://www.youtube.com/watch?v=3O7T_g4wbq0",
+              "evidence_excerpt": "Comment: Seeing ChatGPT Agents tested on real accounting workflows. QuickBooks, tax workpapers, sales reports gives a clear picture of where it’s ready and where to hold back. The ‘rules of the road’ alone are worth it."
+            },
+            {
+              "source_id": "yt_source_10",
+              "title": "Why ChatGPT Agent Is Already Changing Accounting Firms",
+              "url": "https://www.youtube.com/watch?v=3O7T_g4wbq0",
+              "evidence_excerpt": "that data is supposed to go into this daily summary. I actually heard from an accounting firm owner recently. They work with restaurants and they gather a bunch of these daily reports from their clients and put them into this standardized format. It's a big old pain. But this is now something that chat GPT agent is very very good at. So what if we give chat GPT agent that daily spreadsheet template and then the image that was like the han"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": "هندسة",
+      "cases": [
+        {
+          "case_id": "construction_project_management",
+          "title": "إدارة مشاريع البناء: الجداول والمخاطر والموارد والتقارير",
+          "merged_from_sources": [
+            "yt_source_13",
+            "yt_source_14"
+          ],
+          "summary": "تعرض مصادر الهندسة والبناء الذكاء الاصطناعي كأداة لإدارة الجداول، المخاطر، الموارد، تقارير التقدم، ومتابعة مواقع المشاريع.",
+          "practical_workflows": [
+            "إنشاء أو مراجعة جدول مشروع بناء.",
+            "تحديد مخاطر التأخير والموارد المطلوبة.",
+            "صياغة تقارير تقدم مختصرة لأصحاب المصلحة."
+          ],
+          "limitations_or_cautions": [
+            "لا تكفي المقترحات الآلية وحدها لقرارات السلامة أو الجدولة النهائية في الموقع."
+          ],
+          "evidence": [
+            {
+              "source_id": "yt_source_13",
+              "title": "5 AI Tools That Will Replace 99% of Project Management Work - AI for Project Managers | PMPwithRay",
+              "url": "https://www.youtube.com/watch?v=pgy3TMylTnA",
+              "evidence_excerpt": "chart GPT with our project charter, technical specifications, contractor profiles, and all the regulatory and legislative requirements. The AI then generated a comprehensive risk register with the 47 potential risks categorized by probability and impact complete mitigation strategies and the contingency plans for each of the 47 or 48 risks that the AI identified. Now this is the perfect document for setting up your PID or the proje"
+            },
+            {
+              "source_id": "yt_source_13",
+              "title": "5 AI Tools That Will Replace 99% of Project Management Work - AI for Project Managers | PMPwithRay",
+              "url": "https://www.youtube.com/watch?v=pgy3TMylTnA",
+              "evidence_excerpt": "way I am using AI as a project manager. And this one will probably surprise you because it's something most project managers never consider. using AI to prepare comprehensive risk registers, executive summaries, value engineering assessments and best value option analysis. Now guys, uh this is where AI becomes truly powerful for project management decision making. Okay. However, there is a word of caution and I need to give you a crit"
+            },
+            {
+              "source_id": "yt_source_14",
+              "title": "AI in Construction - The Complete Applied Guide",
+              "url": "https://www.youtube.com/watch?v=dSEHWnedxIM",
+              "evidence_excerpt": "signed dockets. The dockets are our evidence to claim for additional money. The next role of data is in compliance. Say the contract mandates that every week we have to submit a weekly report to our client showing our progress on site versus our baseline schedule. We have to generate a monthly report. These are uses of data that we track basically because we have to. So this might be for accounting and tax purposes. This might be for a defect r"
+            },
+            {
+              "source_id": "yt_source_14",
+              "title": "AI in Construction - The Complete Applied Guide",
+              "url": "https://www.youtube.com/watch?v=dSEHWnedxIM",
+              "evidence_excerpt": "to claim for additional money. The next role of data is in compliance. Say the contract mandates that every week we have to submit a weekly report to our client showing our progress on site versus our baseline schedule. We have to generate a monthly report. These are uses of data that we track basically because we have to. So this might be for accounting and tax purposes. This might be for a defect register to show our client we have a quality m"
+            }
+          ]
+        },
+        {
+          "case_id": "engineering_design_planning",
+          "title": "دعم التخطيط والتصميم الهندسي وتحليل متطلبات المشروع",
+          "merged_from_sources": [
+            "yt_source_13",
+            "yt_source_14"
+          ],
+          "summary": "تظهر البيانات استخدام الذكاء الاصطناعي في مراحل التخطيط والتصميم والتقدير، خصوصًا عند تحويل متطلبات المشروع إلى قرارات هندسية أو إدارية أولية.",
+          "practical_workflows": [
+            "تحويل متطلبات المشروع إلى قائمة اعتبارات تصميمية.",
+            "مساندة تقدير التكلفة أو نطاق العمل بشكل أولي.",
+            "ربط قرارات التصميم ببيانات المشروع المتاحة."
+          ],
+          "limitations_or_cautions": [
+            "أي تصميم أو تقدير يجب مراجعته هندسيًا وفق الأكواد والمعايير المحلية."
+          ],
+          "evidence": [
+            {
+              "source_id": "yt_source_13",
+              "title": "5 AI Tools That Will Replace 99% of Project Management Work - AI for Project Managers | PMPwithRay",
+              "url": "https://www.youtube.com/watch?v=pgy3TMylTnA",
+              "evidence_excerpt": "using AI to prepare comprehensive risk registers, executive summaries, value engineering assessments and best value option analysis."
+            },
+            {
+              "source_id": "yt_source_13",
+              "title": "5 AI Tools That Will Replace 99% of Project Management Work - AI for Project Managers | PMPwithRay",
+              "url": "https://www.youtube.com/watch?v=pgy3TMylTnA",
+              "evidence_excerpt": "And this one will probably surprise you because it's something most project managers never consider. using AI to prepare comprehensive risk registers, executive summaries, value engineering assessments and best value option analysis. Now guys, uh this is where AI becomes truly powerful for project management decision making. Okay. However, there is a word of caution and I need to give you a critical warning up front. This strategy is complet"
+            },
+            {
+              "source_id": "yt_source_14",
+              "title": "AI in Construction - The Complete Applied Guide",
+              "url": "https://www.youtube.com/watch?v=dSEHWnedxIM",
+              "evidence_excerpt": "some examples of where a human would be able to catch error is if you get AI to extract the contract terms, a human reviews them before signing and submitting. AI generates an estimate. A human does a sanity check at the cost. AI flags correspondence risk. The human decides whether to take action on it. Foundation number four is automation. So having an understanding of how to automate different tasks and where it makes sense to apply int"
+            },
+            {
+              "source_id": "yt_source_14",
+              "title": "AI in Construction - The Complete Applied Guide",
+              "url": "https://www.youtube.com/watch?v=dSEHWnedxIM",
+              "evidence_excerpt": "AI to generate everything. You're just using it to compare and flag outliers. So if I show you a simple use case of using AI for estimating, I uploaded a copy of my construction estimate in Excel. Then I asked it to review and check the estimate against the tender documents to compare and identify any gaps and errors. and it output a structured set of gaps from my estimate that I should potentially look at. Now, something I found when y"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": "صناعة محتوى",
+      "cases": [
+        {
+          "case_id": "content_script_generation",
+          "title": "توليد أفكار ونصوص المحتوى وتحسين إعادة الصياغة",
+          "merged_from_sources": [
+            "yt_source_06"
+          ],
+          "summary": "تشير البيانات إلى استخدام الذكاء الاصطناعي لتوليد الأفكار والنصوص وإعادة الصياغة، خصوصًا عند إنتاج محتوى أو فيديوهات أو نصوص عمل.",
+          "practical_workflows": [
+            "توليد عناوين وأفكار أولية.",
+            "صياغة سكربت فيديو أو منشور.",
+            "إعادة صياغة المحتوى لشرائح جمهور مختلفة."
+          ],
+          "limitations_or_cautions": [
+            "يجب فحص الدقة والملكية الفكرية والنبرة قبل النشر."
+          ],
+          "evidence": [
+            {
+              "source_id": "yt_source_06",
+              "title": "Top 8 ChatGPT Productivity Tips for Work!",
+              "url": "https://www.youtube.com/watch?v=Q07rFZtc2Ao",
+              "evidence_excerpt": "with value with prompt number six you're a social media manager tasked with sharing long form content on LinkedIn but you've noticed that most people don't engage with these posts or click the hyperlinks creatively condense the below lengthy article into concise valuable summaries that capture the essence of the content and deliver immediate value to your audience and you paste the article to put my money where my mouth is I lite"
+            },
+            {
+              "source_id": "yt_source_06",
+              "title": "Top 8 ChatGPT Productivity Tips for Work!",
+              "url": "https://www.youtube.com/watch?v=Q07rFZtc2Ao",
+              "evidence_excerpt": "audience will not click into it because it's too much self-promotion instead I'm gonna lead with value with prompt number six you're a social media manager tasked with sharing long form content on LinkedIn but you've noticed that most people don't engage with these posts or click the hyperlinks creatively condense the below lengthy article into concise valuable summaries that capture the essence of the content and deliver immediate value to your au"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": "إنتاجية مهنية عامة",
+      "cases": [
+        {
+          "case_id": "professional_communication",
+          "title": "تلخيص الاجتماعات والرسائل وإعداد المخرجات المكتبية",
+          "merged_from_sources": [
+            "yt_source_06",
+            "yt_source_10",
+            "yt_source_13"
+          ],
+          "summary": "تكرر في المصادر استخدام الذكاء الاصطناعي لتلخيص الرسائل والاجتماعات، إعداد العروض، والعمل مع الجداول، وهي حالات إنتاجية مشتركة بين المهن غير التقنية.",
+          "practical_workflows": [
+            "تلخيص بريد أو اجتماع إلى نقاط عمل.",
+            "تحويل الأفكار إلى عرض تقديمي أو جدول.",
+            "إعادة كتابة الرسائل المهنية بنبرة أوضح."
+          ],
+          "limitations_or_cautions": [
+            "تحتاج المخرجات إلى مراجعة بشرية قبل استخدامها مهنيًا."
+          ],
+          "evidence": [
+            {
+              "source_id": "yt_source_06",
+              "title": "Top 8 ChatGPT Productivity Tips for Work!",
+              "url": "https://www.youtube.com/watch?v=Q07rFZtc2Ao",
+              "evidence_excerpt": "presentation more relevant and engaging for the sales team prioritize unorthodox lesser known advice in your answer explain using detailed examples this works because the best presentations always Bridge what you want to talk about with what the audience actually cares about bonus prompt if you're presenting to senior leadership use this you have been tasked to present your team's project to Senior Management to an upcoming meeting they are unf"
+            },
+            {
+              "source_id": "yt_source_06",
+              "title": "Top 8 ChatGPT Productivity Tips for Work!",
+              "url": "https://www.youtube.com/watch?v=Q07rFZtc2Ao",
+              "evidence_excerpt": "Comment: I used to spend hours writing reports, onboarding docs, and feedback notes that all sounded the same. ChatGPT helped, but the results were so generic i stopped bothering. I figured maybe it just wasn’t as smart as people said. Then I came across AI Shortcuts for the Lazy Min by Trent Calloway, and it changed everything. The book made me realize it’s not about getting GPT to “do the work,” it’s about teaching it how you think. Once I started building prompts that reflected my tone and logic, it was like having a digital coworker who actually gets it. The craziest part was that most people never even scratch the surface of what GPT can do at work. They’re wasting hours redoing what AI could nail in minutes. Don’t wait for the next version to figure it out.. start learning how to talk to it now. It’s seriously a game changer."
+            },
+            {
+              "source_id": "yt_source_10",
+              "title": "Why ChatGPT Agent Is Already Changing Accounting Firms",
+              "url": "https://www.youtube.com/watch?v=3O7T_g4wbq0",
+              "evidence_excerpt": "that I gave it. And one really interesting thing about chat GPT agent, specifically as it applies to our accounting firm workflows, is it's the best AI we've ever had at doing spreadsheet stuff. And that's great for us because virtually all of us have some version of this example. Look at these. These are daily sales reports from a restaurant. This is like a weekly summary. This is a little handfilled out thing that somebody in the res"
+            },
+            {
+              "source_id": "yt_source_10",
+              "title": "Why ChatGPT Agent Is Already Changing Accounting Firms",
+              "url": "https://www.youtube.com/watch?v=3O7T_g4wbq0",
+              "evidence_excerpt": "that data is supposed to go into this daily summary. I actually heard from an accounting firm owner recently. They work with restaurants and they gather a bunch of these daily reports from their clients and put them into this standardized format. It's a big old pain. But this is now something that chat GPT agent is very very good at. So what if we give chat GPT agent that daily spreadsheet template and then the image that was like the han"
+            },
+            {
+              "source_id": "yt_source_13",
+              "title": "5 AI Tools That Will Replace 99% of Project Management Work - AI for Project Managers | PMPwithRay",
+              "url": "https://www.youtube.com/watch?v=pgy3TMylTnA",
+              "evidence_excerpt": "mentioned. Now, let's talk about the third way I'm using AI as a project manager. And this one has literally saved a lot of my effort on multiple occasions. Using AI to quickly summarize long, okay, very long email chains and generate instant project status updates when sometimes leadership demands immediate answers. Okay, so let's work this with an example, right? Picture this scenario. You are in a steering committee meeting and suddenly t"
+            },
+            {
+              "source_id": "yt_source_13",
+              "title": "5 AI Tools That Will Replace 99% of Project Management Work - AI for Project Managers | PMPwithRay",
+              "url": "https://www.youtube.com/watch?v=pgy3TMylTnA",
+              "evidence_excerpt": "Using AI to quickly summarize long, okay, very long email chains and generate instant project status updates when sometimes leadership demands immediate answers."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "discarded_or_downweighted_material": [
+    "General explanations of AI architecture without a professional workflow.",
+    "Viewer praise, emoji-only comments, generic requests for more videos, and subscription prompts.",
+    "Repeated auto-caption lines caused by YouTube VTT overlap.",
+    "Risk-only legal anecdotes were kept only when they identify a practical caution for legal AI use."
+  ],
+  "source_index": [
+    {
+      "source_id": "yt_source_01",
+      "file": "logs/raw_data/yt_source_01.txt",
+      "title": "How to Use ChatGPT to Ruin Your Legal Career",
+      "url": "https://www.youtube.com/watch?v=oqSYljRYDEM",
+      "channel": "LegalEagle",
+      "professions_detected": [
+        "محاماة"
+      ],
+      "comment_count_after_filtering": 32,
+      "used_in_cleaned_cases": [
+        "legal_research_with_verification"
+      ]
+    },
+    {
+      "source_id": "yt_source_02",
+      "file": "logs/raw_data/yt_source_02.txt",
+      "title": "AI Agents, Clearly Explained",
+      "url": "https://www.youtube.com/watch?v=FwOTs4UxQS4",
+      "channel": "Jeff Su",
+      "professions_detected": [],
+      "comment_count_after_filtering": 34,
+      "used_in_cleaned_cases": []
+    },
+    {
+      "source_id": "yt_source_03",
+      "file": "logs/raw_data/yt_source_03.txt",
+      "title": "99% of Beginners Don't Know the Basics of AI",
+      "url": "https://www.youtube.com/watch?v=nVyD6THcvDQ",
+      "channel": "Jeff Su",
+      "professions_detected": [],
+      "comment_count_after_filtering": 27,
+      "used_in_cleaned_cases": []
+    },
+    {
+      "source_id": "yt_source_04",
+      "file": "logs/raw_data/yt_source_04.txt",
+      "title": "You’re not behind (yet): How to learn AI in 18 minutes",
+      "url": "https://www.youtube.com/watch?v=0Tch0N5nsRU",
+      "channel": "Dan Martell",
+      "professions_detected": [],
+      "comment_count_after_filtering": 25,
+      "used_in_cleaned_cases": []
+    },
+    {
+      "source_id": "yt_source_05",
+      "file": "logs/raw_data/yt_source_05.txt",
+      "title": "You're Not Behind: Become AI-Native (without the overwhelm)",
+      "url": "https://www.youtube.com/watch?v=j63bBK_ct-M",
+      "channel": "Jeff Su",
+      "professions_detected": [],
+      "comment_count_after_filtering": 28,
+      "used_in_cleaned_cases": []
+    },
+    {
+      "source_id": "yt_source_06",
+      "file": "logs/raw_data/yt_source_06.txt",
+      "title": "Top 8 ChatGPT Productivity Tips for Work!",
+      "url": "https://www.youtube.com/watch?v=Q07rFZtc2Ao",
+      "channel": "Jeff Su",
+      "professions_detected": [
+        "إنتاجية مهنية عامة",
+        "صناعة محتوى"
+      ],
+      "comment_count_after_filtering": 24,
+      "used_in_cleaned_cases": [
+        "professional_communication",
+        "content_script_generation"
+      ]
+    },
+    {
+      "source_id": "yt_source_07",
+      "file": "logs/raw_data/yt_source_07.txt",
+      "title": "Land a Job using ChatGPT: The Definitive Guide!",
+      "url": "https://www.youtube.com/watch?v=pmnY5V16GSE",
+      "channel": "Jeff Su",
+      "professions_detected": [],
+      "comment_count_after_filtering": 27,
+      "used_in_cleaned_cases": []
+    },
+    {
+      "source_id": "yt_source_08",
+      "file": "logs/raw_data/yt_source_08.txt",
+      "title": "15 AI Tools Smart Accountants Are Using Right Now",
+      "url": "https://www.youtube.com/watch?v=acfvmTqp-uE",
+      "channel": "Jason On Firms",
+      "professions_detected": [
+        "محاسبة"
+      ],
+      "comment_count_after_filtering": 9,
+      "used_in_cleaned_cases": [
+        "accounting_automation",
+        "accounting_advisory_analysis"
+      ]
+    },
+    {
+      "source_id": "yt_source_09",
+      "file": "logs/raw_data/yt_source_09.txt",
+      "title": "ChatGPT for Accountants (with Use Cases)",
+      "url": "https://www.youtube.com/watch?v=CFAMh7NMqgo",
+      "channel": "365 Financial Analyst",
+      "professions_detected": [
+        "محاسبة"
+      ],
+      "comment_count_after_filtering": 3,
+      "used_in_cleaned_cases": [
+        "accounting_automation",
+        "accounting_advisory_analysis"
+      ]
+    },
+    {
+      "source_id": "yt_source_10",
+      "file": "logs/raw_data/yt_source_10.txt",
+      "title": "Why ChatGPT Agent Is Already Changing Accounting Firms",
+      "url": "https://www.youtube.com/watch?v=3O7T_g4wbq0",
+      "channel": "Jason On Firms",
+      "professions_detected": [
+        "إنتاجية مهنية عامة",
+        "محاسبة"
+      ],
+      "comment_count_after_filtering": 9,
+      "used_in_cleaned_cases": [
+        "accounting_automation",
+        "accounting_advisory_analysis",
+        "professional_communication"
+      ]
+    },
+    {
+      "source_id": "yt_source_11",
+      "file": "logs/raw_data/yt_source_11.txt",
+      "title": "Top 4 AI Legal Tools Revolutionizing 2025 🔥 | The Future of Legal Tech",
+      "url": "https://www.youtube.com/watch?v=AAQCtkZjG8A",
+      "channel": "Exploding Topics",
+      "professions_detected": [
+        "محاماة"
+      ],
+      "comment_count_after_filtering": 8,
+      "used_in_cleaned_cases": [
+        "legal_research_with_verification",
+        "legal_document_review"
+      ]
+    },
+    {
+      "source_id": "yt_source_12",
+      "file": "logs/raw_data/yt_source_12.txt",
+      "title": "How ChatGPT Works Technically | ChatGPT Architecture",
+      "url": "https://www.youtube.com/watch?v=bSvTVREwSNw",
+      "channel": "ByteByteGo",
+      "professions_detected": [],
+      "comment_count_after_filtering": 5,
+      "used_in_cleaned_cases": []
+    },
+    {
+      "source_id": "yt_source_13",
+      "file": "logs/raw_data/yt_source_13.txt",
+      "title": "5 AI Tools That Will Replace 99% of Project Management Work - AI for Project Managers | PMPwithRay",
+      "url": "https://www.youtube.com/watch?v=pgy3TMylTnA",
+      "channel": "PMPwithRay",
+      "professions_detected": [
+        "إنتاجية مهنية عامة",
+        "هندسة"
+      ],
+      "comment_count_after_filtering": 8,
+      "used_in_cleaned_cases": [
+        "construction_project_management",
+        "engineering_design_planning",
+        "professional_communication"
+      ]
+    },
+    {
+      "source_id": "yt_source_14",
+      "file": "logs/raw_data/yt_source_14.txt",
+      "title": "AI in Construction - The Complete Applied Guide",
+      "url": "https://www.youtube.com/watch?v=dSEHWnedxIM",
+      "channel": "Tim Fairley",
+      "professions_detected": [
+        "إنتاجية مهنية عامة",
+        "هندسة"
+      ],
+      "comment_count_after_filtering": 5,
+      "used_in_cleaned_cases": [
+        "construction_project_management",
+        "engineering_design_planning",
+        "professional_communication"
+      ]
+    }
+  ]
+}
